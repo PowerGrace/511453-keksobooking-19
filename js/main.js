@@ -1,6 +1,6 @@
 'use strict';
 
-var numberOfObjects = 8;
+var NUMBER_OF_OBJECTS = 8;
 var PIN_WIDTH = 50; // ширина метки
 var MAP_WIDTH = 1200; // ширина блока .map__overlay
 
@@ -10,7 +10,7 @@ var getRandomBetween = function (max, min) {
 
 var createSimilarAds = function () {
   var similarAds = [];
-  for (var i = 0; i < numberOfObjects; i++) {
+  for (var i = 0; i < NUMBER_OF_OBJECTS; i++) {
     similarAds[i] = {
       author: {
         avatar: 'img/avatars/user0' + (i + 1) + '.png',
@@ -54,7 +54,7 @@ map.classList.remove('map--faded');
 var userPinPattern = document.querySelector('#pin').content.querySelector('.map__pin');
 var userPinImg = userPinPattern.querySelector('img');
 
-for (var i = 0; i < 8; i++) {
+for (var i = 0; i < NUMBER_OF_OBJECTS; i++) {
   userPinPattern.style.left = ads[i].location.x - PIN_WIDTH / 2 + 'px';
   userPinPattern.style.top = ads[i].location.y + 'px';
 
